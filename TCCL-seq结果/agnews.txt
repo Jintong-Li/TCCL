@@ -1,0 +1,174 @@
+(py36) lijintong@dell-PowerEdge-T630:~$ python3 /home/lijintong/SCCL-EXEC-main-copy/main.py \
+>         --use_pretrain SBERT \
+>         --bert distilbert \
+>         --datapath /home/lijintong/sccl-main/AugData/augdata \
+>         --dataname agnews_charswap_20 \
+>         --num_classes 4 \
+>         --text text \
+>         --label label \
+>         --objective SCCL \
+>         --augtype explicit \
+>         --temperature 0.5 \
+>         --eta 1 \
+>         --lr 1e-05 \
+>         --lr_scale 100 \
+>         --max_length 32 \
+>         --batch_size 300 \
+>         --max_iter 1500 \
+>         --print_freq 100 \
+>         --gpuid 0 &
+[1] 21985
+(py36) lijintong@dell-PowerEdge-T630:~$ results path: ./results/SCCL.distilbert.SBERT.explicit.agnews_charswap_20.text.lr1e-05.lrscale100.SCCL.eta1.0.tmp0.5.alpha1.0.seed0/
+..... loading Sentence-BERT !!!
+all_embeddings:(8000, 768), true_labels:8000, pred_labels:8000
+Iterations:56, Clustering ACC:0.645, centers:(4, 768)
+Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 1e-05
+    weight_decay: 0
+
+Parameter Group 1
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.001
+    weight_decay: 0
+)
+
+ Initializing PairConLoss 
+
+*****Intialize SCCLv, temp:0.5, eta:1.0
+
+
+=1500/27=Iterations/Batches
+[0]-----
+loss:    5.671
+pos_mean:        5.490
+neg_mean:        2.642
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.33652762120534785, 'ARI': 0.3533890727232054, 'AMI': 0.3362575340552018}
+[Representation] ACC: 0.685
+[Model] Clustering scores: {'NMI': 0.3142317754613821, 'ARI': 0.32045482520380436, 'AMI': 0.3139531824826796}
+[Model] ACC: 0.652
+[100]-----
+loss:    4.620
+pos_mean:        6.611
+neg_mean:        1.107
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.5572293802999324, 'ARI': 0.5701876005677491, 'AMI': 0.5570482515491418}
+[Representation] ACC: 0.809
+[Model] Clustering scores: {'NMI': 0.3456194422211409, 'ARI': 0.32466503411829084, 'AMI': 0.3453533435190588}
+[Model] ACC: 0.654
+[200]-----
+loss:    4.566
+pos_mean:        6.800
+neg_mean:        1.079
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.5747296274015821, 'ARI': 0.5900368412362164, 'AMI': 0.5745558420411272}
+[Representation] ACC: 0.818
+[Model] Clustering scores: {'NMI': 0.38039728037120346, 'ARI': 0.38184574152909234, 'AMI': 0.3801442425373588}
+[Model] ACC: 0.678
+[300]-----
+loss:    4.527
+pos_mean:        6.985
+neg_mean:        1.068
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.578977737577566, 'ARI': 0.5897077944429909, 'AMI': 0.5788055397844605}
+[Representation] ACC: 0.817
+[Model] Clustering scores: {'NMI': 0.31294106668351707, 'ARI': 0.2979869208989154, 'AMI': 0.3126602410976057}
+[Model] ACC: 0.638
+[400]-----
+loss:    4.514
+pos_mean:        7.061
+neg_mean:        1.066
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.5825740663460416, 'ARI': 0.5929975564254355, 'AMI': 0.5824033592738842}
+[Representation] ACC: 0.818
+[Model] Clustering scores: {'NMI': 0.2353151180642037, 'ARI': 0.23903648309838976, 'AMI': 0.23499761809354586}
+[Model] ACC: 0.551
+[500]-----
+loss:    4.504
+pos_mean:        7.109
+neg_mean:        1.063
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.5850924172804368, 'ARI': 0.5951155893584799, 'AMI': 0.5849227636404586}
+[Representation] ACC: 0.819
+[Model] Clustering scores: {'NMI': 0.25496472512839985, 'ARI': 0.23019501165111048, 'AMI': 0.25466018572382165}
+[Model] ACC: 0.506
+[600]-----
+loss:    4.495
+pos_mean:        7.129
+neg_mean:        1.055
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.5870687482664734, 'ARI': 0.5995167591653424, 'AMI': 0.58690001098486}
+[Representation] ACC: 0.821
+[Model] Clustering scores: {'NMI': 0.28754482558552674, 'ARI': 0.26159707228940343, 'AMI': 0.28725245003804145}
+[Model] ACC: 0.618
+[700]-----
+loss:    4.482
+pos_mean:        7.192
+neg_mean:        1.051
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.6119171234935877, 'ARI': 0.6423541411573227, 'AMI': 0.6117591433568663}
+[Representation] ACC: 0.846
+[Model] Clustering scores: {'NMI': 0.39396312174135456, 'ARI': 0.3858626924720862, 'AMI': 0.3937155046467408}
+[Model] ACC: 0.697
+[800]-----
+loss:    0.000
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.6125258789594873, 'ARI': 0.648426089697507, 'AMI': 0.6123683010834537}
+[Representation] ACC: 0.848
+[Model] Clustering scores: {'NMI': 0.28238895872346614, 'ARI': 0.27936252468709966, 'AMI': 0.282095459082427}
+[Model] ACC: 0.521
+[900]-----
+loss:    0.000
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.6131510662002063, 'ARI': 0.6490109641859257, 'AMI': 0.6129937452068842}
+[Representation] ACC: 0.848
+[Model] Clustering scores: {'NMI': 0.4201784433492531, 'ARI': 0.43144094580249753, 'AMI': 0.41994150243863204}
+[Model] ACC: 0.722
+[1000]-----
+loss:    0.000
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.6128581150633174, 'ARI': 0.6488987507680398, 'AMI': 0.6127006750323236}
+[Representation] ACC: 0.848
+[Model] Clustering scores: {'NMI': 0.22020129816062456, 'ARI': 0.20306576422288267, 'AMI': 0.2198840612688776}
+[Model] ACC: 0.509
+[1100]-----
+loss:    0.000
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.612583804081575, 'ARI': 0.6487044399595725, 'AMI': 0.6124262531269307}
+[Representation] ACC: 0.848
+[Model] Clustering scores: {'NMI': 0.21981411743978463, 'ARI': 0.19914497669120373, 'AMI': 0.21949163195074747}
+[Model] ACC: 0.537
+[1200]-----
+loss:    0.000
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.6130349100143041, 'ARI': 0.6493437866758255, 'AMI': 0.6128775450483872}
+[Representation] ACC: 0.849
+[Model] Clustering scores: {'NMI': 0.196689642680416, 'ARI': 0.16365882970608714, 'AMI': 0.1963615266636076}
+[Model] ACC: 0.479
+[1300]-----
+loss:    0.000
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.6130349100143041, 'ARI': 0.6493437866758255, 'AMI': 0.6128775450483872}
+[Representation] ACC: 0.849
+[Model] Clustering scores: {'NMI': 0.18991662163072082, 'ARI': 0.17039941637671846, 'AMI': 0.18958616814585805}
+[Model] ACC: 0.504
+[1400]-----
+loss:    0.000
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.5876272273512033, 'ARI': 0.5995879572349265, 'AMI': 0.5874586840578808}
+[Representation] ACC: 0.821
+[Model] Clustering scores: {'NMI': 0.24793376078078186, 'ARI': 0.2486022109981411, 'AMI': 0.24762605403424276}
+[Model] ACC: 0.568
+[1500]-----
+loss:    0.000
+---- 27 evaluation batches ----
+[Representation] Clustering scores: {'NMI': 0.612464819651468, 'ARI': 0.6486172357561357, 'AMI': 0.6123072230964992}
+[Representation] ACC: 0.848
+[Model] Clustering scores: {'NMI': 0.16276832497238528, 'ARI': 0.13829352468507033, 'AMI': 0.16242727853996758}
+[Model] ACC: 0.454
